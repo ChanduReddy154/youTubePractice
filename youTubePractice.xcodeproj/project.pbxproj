@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B4B831524D16E4300E35600 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4B831424D16E4300E35600 /* Constants.swift */; };
+		1B4B831724D174C600E35600 /* VideosDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4B831624D174C600E35600 /* VideosDetails.swift */; };
+		1B4B831924D1758700E35600 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4B831824D1758700E35600 /* VideoModel.swift */; };
+		1B4B831B24D1B19A00E35600 /* VideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4B831A24D1B19A00E35600 /* VideoResponse.swift */; };
 		1BB96EB524A1EC3500719EC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB96EB424A1EC3500719EC0 /* AppDelegate.swift */; };
 		1BB96EB724A1EC3500719EC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB96EB624A1EC3500719EC0 /* SceneDelegate.swift */; };
 		1BB96EB924A1EC3500719EC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB96EB824A1EC3500719EC0 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B4B831424D16E4300E35600 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1B4B831624D174C600E35600 /* VideosDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosDetails.swift; sourceTree = "<group>"; };
+		1B4B831824D1758700E35600 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		1B4B831A24D1B19A00E35600 /* VideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponse.swift; sourceTree = "<group>"; };
 		1BB96EB124A1EC3500719EC0 /* youTubePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youTubePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB96EB424A1EC3500719EC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BB96EB624A1EC3500719EC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				1BB96EBD24A1EC3700719EC0 /* Assets.xcassets */,
 				1BB96EBF24A1EC3700719EC0 /* LaunchScreen.storyboard */,
 				1BB96EC224A1EC3700719EC0 /* Info.plist */,
+				1B4B831424D16E4300E35600 /* Constants.swift */,
+				1B4B831624D174C600E35600 /* VideosDetails.swift */,
+				1B4B831824D1758700E35600 /* VideoModel.swift */,
+				1B4B831A24D1B19A00E35600 /* VideoResponse.swift */,
 			);
 			path = youTubePractice;
 			sourceTree = "<group>";
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B4B831724D174C600E35600 /* VideosDetails.swift in Sources */,
+				1B4B831924D1758700E35600 /* VideoModel.swift in Sources */,
 				1BB96EB924A1EC3500719EC0 /* ViewController.swift in Sources */,
 				1BB96EB524A1EC3500719EC0 /* AppDelegate.swift in Sources */,
 				1BB96EB724A1EC3500719EC0 /* SceneDelegate.swift in Sources */,
+				1B4B831524D16E4300E35600 /* Constants.swift in Sources */,
+				1B4B831B24D1B19A00E35600 /* VideoResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
