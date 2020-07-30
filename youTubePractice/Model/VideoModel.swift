@@ -8,7 +8,13 @@
 
 import Foundation
 
-class VideoModel: Decodable {
+protocol ModelDelegate {
+    func videosFetched(_ videos: [VideosDetails])
+}
+
+class VideoModel {
+    
+    var delegate: ModelDelegate?
     
     func getVideosYouTube() {
         
@@ -31,14 +37,18 @@ class VideoModel: Decodable {
                 // parsing json
                        let decoder = JSONDecoder()
                        decoder.dateDecodingStrategy = .iso8601
-                       let response = try decoder.decode(VideoResponse.self, from: data!)
+                let response = try decoder.decode(VideoResponse.self, from: data!)
+                if response.videoItems != nil {
+                    
+                    DispatchQueue.main.async {
+                        self.delegate?.videosFetched(response.videoItems!)
+                    }
+                    
+                }
                     dump(response)
             }catch {
-                //print("Error in json parsing")
+                print("Error in json parsing")
             }
-           
-            
-            
         }
         //kick off task
         datatask.resume()
