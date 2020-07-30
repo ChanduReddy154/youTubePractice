@@ -25,9 +25,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func videosFetched(_ videos: [VideosDetails]) {
         self.youVideos = videos
-        
         tableView.reloadData()
      }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // confirm that video is selected
+               guard tableView.indexPathForSelectedRow != nil  else {
+                   return
+               }
+               // reference to the video when tapped
+               let selectedVideo = youVideos[tableView.indexPathForSelectedRow!.row]
+               
+               //get a reference to the video view controller
+               let videosVC = segue.destination as! VideosViewController
+        
+                //set the video property of the videoviewcontroller
+                videosVC.videoPlay = selectedVideo
+    }
+       
      
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,9 +50,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
        }
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath)
-        let title = self.youVideos[indexPath.row].videoTitle
-        cell.textLabel?.text = title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoTableViewCell
+        
+        let videos = self.youVideos[indexPath.row]
+        cell.videoCell(videos)
        return cell
     }
     
